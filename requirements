@@ -1,0 +1,27 @@
+requirements
+
+sudo apt update
+sudo apt install curl
+sudo apt install git
+sudo apt install python3
+sudo apt install python3-pip
+sudo apt install python3-rpi.gpio python-rpi.gpio (for led)
+wget wget https://raspberrytips.nl/files/tm1637.py (for timer)
+git clone https://github.com/adafruit/Adafruit_python_CharLCD.git(for display)
+
+#To view pins
+pinout
+
+#Camera Enable
+
+sudo raspi-config
+
+5 Interfacing Options 
+
+Note: to enable a module use space button
+
+enable I2C
+enable legacy camera
+
+#to run nfc
+nfc poll
