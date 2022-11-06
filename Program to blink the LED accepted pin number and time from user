@@ -1,0 +1,12 @@
+import RPi.GPIO as GPIO
+import time
+a=int(input(“enter a pin no.:”))
+x=int(input(“enter a time:”))
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+GPIO(a,GPIO.OUT)
+while True:
+  GPIO.output(a,False)
+  time.sleep(x)
+  GPIO.output(a,True)
+  time.sleep(x)
