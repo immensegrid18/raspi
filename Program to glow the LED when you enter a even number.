@@ -1,0 +1,12 @@
+import RPi.GPIO as GPIO
+a=int(input(“enter a pin no.:”)) 
+if (a%2==0):
+  print(“led will glow”)
+ 	GPIO.setwarnings(False)
+ 	GPIO.setmode(GPIO.BOARD)
+ 	GPIO.setup(8,GPIO.OUT) 	
+ 	GPIO.output(8,False)
+while True:
+ 	GPIO.output(8,True)
+else:
+ 	print(“sorry LED cannot glow”)
