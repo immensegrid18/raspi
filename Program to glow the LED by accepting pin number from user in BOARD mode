@@ -1,0 +1,8 @@
+Import RPi.GPIO as GPIO
+GPIO.setwarnings(False)
+GPIO.setmode(GPIO.BOARD)
+x=int(input(“enter a pin number:”))
+GPIO.setup(x,GPIO.OUT)
+GPIO.output(x,False)
+while True:
+  GPIO.output(x,True)
