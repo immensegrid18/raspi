@@ -1,0 +1,22 @@
+
+import sys
+import time
+import datetime
+import RPi.GPIO as GPIO
+
+Display = tm1637.TM1637(23,24,tm1637.BRIGHT_TYPICAL)
+
+Display.Clear()
+Display.SetBrightness(1)
+
+while(True):
+now=datetime.datetime.now()
+hour=now.hour
+minuute=mow.minute
+second=now.second
+currenttime=[int(hour/10),hour%10,int(minute/10),minute%10]
+
+Display.show(currenttime)
+Display.showDoublepoint(second%2)
+
+time.sleep()
