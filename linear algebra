@@ -1,0 +1,647 @@
+Q1) Write a python program to accept an R x C matrix from the user.
+
+M1=[]
+r1=int(input("Enter rows"))
+c1=int(input("Enter cols"))
+for i in range(r1):
+	a=[]
+	for j in range(c1):
+		e=int(input())
+		a.append(e)
+	M1.append(a)
+for i in range(r1):
+	for j in range(c1):
+		print(M1[i][j],end=" ")
+	print(" ")
+Q.2)Write a python program to accept an R x C matrix from the user and display the second row.
+
+M1=[]
+r1=int(input("Enter rows"))
+c1=int(input("Enter cols"))
+for i in range(r1):
+	a=[]
+	for j in range(c1):
+		e=int(input())
+		a.append(e)
+	M1.append(a)
+for i in range(r1):
+	for j in range(c1):
+		print(M1[i][j],end=" ")
+	print(" ")
+print("Second row of a Matrix:")
+for j in range(c1):
+	print(M1[1][j],end=" ")
+print(" ")
+	
+Q.3)Write a python program to accept an R x C matrix from the user and display the second column.
+
+M1=[]
+r1=int(input("Enter rows"))
+c1=int(input("Enter cols"))
+for i in range(r1):
+	a=[]
+	for j in range(c1):
+		e=int(input())
+		a.append(e)
+	M1.append(a)
+for i in range(r1):
+	for j in range(c1):
+		print(M1[i][j],end=" ")
+	print(" ")
+print("Second column of a Matrix:")
+for i in range(r1):
+	print(M1[i][1])
+print(" ")
+
+Q.4) Write a python program to accept an R x C matrix from the user and display the last row.
+
+M1=[]
+r1=int(input("Enter rows"))
+c1=int(input("Enter cols"))
+for i in range(r1):
+	a=[]
+	for j in range(c1):
+		e=int(input())
+		a.append(e)
+	M1.append(a)
+for i in range(r1):
+	for j in range(c1):
+		print(M1[i][j],end=" ")
+	print(" ")
+print("Last row of a Matrix:")
+for j in range(c1):
+	print(M1[r1-1][j],end=" ")
+print(" ")
+
+Q.5)(Same as 2 and 3 just take user input)
+
+Q.6 )Write a python program to accept an RC matrix and a scalar from the user. Find the scalar matrix multiplication.
+
+M1=[]
+r1=int(input("Enter rows:"))
+c1=int(input("Enter cols:"))
+s=int(input("Enter number for multiplication:"))
+for i in range(r1):
+	a=[]
+	for j in range(c1):
+		e=int(input())
+		a.append(e)
+	M1.append(a)
+for i in range(r1):
+	for j in range(c1):
+		print(M1[i][j],end=" ")
+	print(" ")
+print("scalar matrix multiplication:")
+m=M1
+for i in range(r1):
+	for j in range(c1):
+		m[i][j]=M1[i][j]*s
+		print(m[i][j],end=" ")
+	print(" ")
+Q.7) Write a python program to accept two RC matrices from the user. Find the sum of the two matrices.
+
+M1=[]
+M2=[]
+r1=int(input("Enter rows"))
+c1=int(input("Enter cols"))
+r2=int(input("Enter rows"))
+c2=int(input("Enter cols"))
+if (r1==r2 and c1==c2):
+	print("Enter element for Matrix-1")
+	for i in range(r1):
+		a=[]
+		for j in range(c1):
+			e=int(input())
+			a.append(e)
+		M1.append(a)
+	print("Enter element for Matrix-2")
+	for i in range(r2):
+		a=[]
+		for j in range(c2):
+			e=int(input())
+			a.append(e)
+		M2.append(a)
+print("Matrix-1:")
+for i in range(r1):
+		for j in range(c1):
+			print(M1[i][j],end=" ")
+		print(" ")
+print("Matrix-2:")
+for i in range(r1):
+		for j in range(c1):
+			print(M2[i][j],end=" ")
+		print(" ")
+print("Addition of two Matrix:")
+sum=M1
+for i in range(r1):
+	for j in range(c1):
+		sum[i][j]=M1[i][j]+M2[i][j]
+		print(sum[i][j],end=" ")
+	print(" ")
+Q.8) Write a pyton program to  accept 3*3 matrices 'A','B' and 'C' from user. Find the matrix A+B+C 
+
+M1=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+print("Enter elements for 1st Matrix:")
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M1.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M1[i][j],end=" ")
+    print()
+print("Enter elements for 2nd Matrix:")
+M2=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M2.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M2[i][j],end=" ")
+    print()
+print("Enter elements for 3rd Matrix:")
+M3=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M3.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M3[i][j],end=" ")
+    print()
+s=M3
+print("Addition of 3-Matrix")
+for i in range(r):
+	for j in range(c):
+		s[i][j]=M1[i][j]+M2[i][j]+M3[i][j]
+		print(s[i][j],end=" ")
+	print()
+Q.9) Write a python program to accept two RC matrices ' A' prime and 'B' from the user. Find the matrix 2A + B
+
+M1=[]
+M2=[]
+r1=int(input("Enter rows"))
+c1=int(input("Enter cols"))
+r2=int(input("Enter rows"))
+c2=int(input("Enter cols"))
+# optional just declare r1 and c2 as global variables :)
+if (r1==r2 and c1==c2):
+	print("Enter element for Matrix-1")
+	for i in range(r1):
+		a=[]
+		for j in range(c1):
+			e=int(input())
+			a.append(e)
+		M1.append(a)
+	print("Enter element for Matrix-2")
+	for i in range(r2):
+		a=[]
+		for j in range(c2):
+			e=int(input())
+			a.append(e)
+		M2.append(a)
+print("Matrix-1:")
+for i in range(r1):
+		for j in range(c1):
+			print(M1[i][j],end=" ")
+		print(" ")
+print("Matrix-2:")
+for i in range(r1):
+		for j in range(c1):
+			print(M2[i][j],end=" ")
+		print(" ")
+print("Addition of two Matrix:")
+sum=M1
+for i in range(r1):
+	for j in range(c1):
+		sum[i][j]=(2*M1[i][j])+M2[i][j]
+		print(sum[i][j],end=" ")
+	print(" ")
+Q.10) well-defined Matrix find AB:
+
+A=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+print("Enter elements for 1st Matrix:")
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    A.append(a)
+for i in range(r):
+    for j in range(c):
+        print(A[i][j],end=" ")
+    print()
+print("Enter elements for 2nd Matrix:")
+B=[]
+r1=int(input("Enter no.of rows :"))
+c1=int(input("Enter no.of cols :"))
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    B.append(a)
+for i in range(r):
+    for j in range(c):
+        print(B[i][j],end=" ")
+    print()
+if (c==r1):
+    print("AB=")
+    mul=[[0,0],[0,0]] # for 3X3 [[0,0],[0,0],[0,0]] varies Dimensions to D...
+    for i in range(r):
+        for j in range(c1):
+            for k in range(c):
+                mul[i][j]+=A[i][k]*B[k][j]
+    for i in range(r):
+        for j in range(c):
+          print(mul[i][j], end=" ")
+        print()
+else:
+    print("Matrix is not well-Defined")
+	
+Q.11 & 12:) Write a python program to find the determinat of 2*2 & 3*3 Matrix 
+
+def det3(M):
+    d=(M[0][0]*(M[1][1]*M[2][2]-M[2][1]*M[1][2])- M[0][1]*(M[1][0]*M[2][2]-M[2][0]*M[1][2])+ M[0][2]*(M[1][0]*M[2][1]-M[2][0]*M[1][1]))
+    print("Determinant of Given matrix :",d)
+def det2(M):
+    d=(M[0][0]*M[1][1]-M[1][0]*M[0][1])
+    print("Determinant of Given matrix :",d)
+M=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M[i][j],end=" ")
+    print()
+if (r==3 and c==3):
+    det3(M)
+if (r==2 and c==2):
+    det2(M)
+Q.13) write a python to accept two 2*2 matrix 'A','B' from the user. find the determinant of the matrix A+2B
+
+def det2(s):
+    d=(s[0][0]*s[1][1]-s[1][0]*s[0][1])
+    print("Determinant of Given matrix :",d)
+M1=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+print("Enter elements for 1st Matrix:")
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M1.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M1[i][j],end=" ")
+    print()
+print("Enter elements for 2nd Matrix:")
+M2=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M2.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M2[i][j],end=" ")
+    print()
+print("Addition of two Matrix")
+print("M1+2M2:")
+s=M1
+for i in range(r):
+	for j in range(c):
+		s[i][j]=M1[i][j]+(M2[i][j]*2)
+		print(s[i][j],end=" ")
+	print(" ")
+if (r==2 and c==2):
+    det2(s)
+
+Q.14)  write a python to accept two 3*3 matrix 'A','B' and 'C' from the user. find the determinant of the matrix A+B+C
+
+M1=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+print("Enter elements for 1st Matrix:")
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M1.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M1[i][j],end=" ")
+    print()
+print("Enter elements for 2nd Matrix:")
+M2=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M2.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M2[i][j],end=" ")
+    print()
+print("Enter elements for 3rd Matrix:")
+M3=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M3.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M3[i][j],end=" ")
+    print()
+s=M3
+for i in range(r):
+	for j in range(c):
+		s[i][j]=M1[i][j]+M2[i][j]+M3[i][j]
+d=(s[0][0]*s[1][1]-s[1][0]*s[0][1])
+print("Determinant of Given matrix :",d)
+
+
+Q.15 & 16 )  Write a program to accept  2*2 & 3*3 matrix from the user and check if it inverse exist
+
+def det3(M):
+    d=(M[0][0]*(M[1][1]*M[2][2]-M[2][1]*M[1][2])- M[0][1]*(M[1][0]*M[2][2]-M[2][0]*M[1][2])+ M[0][2]*(M[1][0]*M[2][1]-M[2][0]*M[1][1]))
+    if (d==0):
+        print("Inverse Does not Exits")
+    else:
+        print("Determinant of Given matrix :",d)
+    
+def det2(M):
+    d=(M[0][0]*M[1][1]-M[1][0]*M[0][1])
+    if (d==0):
+        print("Inverse Does not Exits")
+    else:
+        print("Determinant of Given matrix :",d)
+M=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M[i][j],end=" ")
+    print()
+if (r==2 and c==2):
+    det2(M)
+if (r==3 and c==3):
+    det3(M)
+
+
+Q.17) Write a python to accept a 2*2  matrix from the user and finds its inverse
+
+A=[]
+r=2
+c=2
+print("Enter elements in array:")
+for i in range(r):
+	a=[]
+	for j in range(c):
+		e=int(input())
+		a.append(e)
+	A.append(a)
+for i in range(r):
+		for j in range(c):
+			print(A[i][j],end=" ")
+		print()
+		
+r1=A[0][0]*A[1][1]
+r2=A[1][0] * A[0][1]
+d=r1-r2
+if(d==0):
+	print("Inverse does not exist")
+else:
+	print("The inverse matrix is:")
+	B=[[0,0],[0,0]]
+	B[0][0] = (A[1][1]/d)
+	B[0][1] = -(A[0][1]/d)
+	B[1][0] = -(A[1][0]/d)
+	B[1][1] = (A[0][0]/d)
+	for i in range(r):
+		for j in range(c):
+			print(B[i][j],end=" ")
+		print()
+
+Q.18) Write a python program to accept 3*3 matrix from the user and finds its inverse
+
+M=[]
+r=3
+c=3
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M[i][j] ,end=" ")
+    print()
+d=(M[0][0]*(M[1][1]*M[2][2]-M[2][1]*M[1][2])- M[0][1]*(M[1][0]*M[2][2]-M[2][0]*M[1][2])+ M[0][2]*(M[1][0]*M[2][1]-M[2][0]*M[1][1]))
+print(d)
+if (d==0):
+    print("Inverse of a matrix does not exit")
+else:
+    print("Inverse of a given matrix :")
+    B=[[0,0,0],[0,0,0],[0,0,0]]
+    B[0][0]=(M[1][1]*M[2][2]- M[2][1]*M[1][2])/d
+    B[0][1]=-(M[1][0]*M[2][2]- M[2][0]*M[1][2])/d
+    B[0][2]=(M[1][0]*M[2][1]- M[2][0]*M[1][1])/d
+    B[1][0]=-(M[0][1]*M[2][2]- M[2][1]*M[0][2])/d
+    B[1][1]=(M[0][0]*M[2][2]- M[2][0]*M[0][2])/d
+    B[1][2]=-(M[0][0]*M[2][1]- M[2][0]*M[0][1])/d
+    B[2][0]=(M[0][1]*M[1][2]- M[1][1]*M[0][2])/d
+    B[2][1]=-(M[0][0]*M[1][2]- M[1][0]*M[0][2])/d
+    B[2][2]=(M[0][0]*M[1][1]- M[1][0]*M[0][1])/d
+for i in range(r):
+    for j in range(c):
+        print(B[j][i],end=" ") #transpose
+    print()
+
+
+Q.19) Write a python program to accept two 2*2 matrix 'A' and 'B' from the user. Find the matrix A+( B inverse)
+
+
+A=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+print("Enter elements for 1st Matrix:")
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    A.append(a)
+for i in range(r):
+    for j in range(c):
+        print(A[i][j],end=" ")
+    print()
+print("Enter elements for 2nd Matrix:")
+B=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    B.append(a)
+for i in range(r):
+    for j in range(c):
+        print(B[i][j],end=" ")
+    print()
+d=(B[0][0]*B[1][1]-B[1][0]*B[0][1])
+if(d==0):
+    print("Inverse doesn't exits")
+else:
+    I=[[0,0],[0,0]]
+    I[0][0]=(B[1][1]/d)
+    I[0][1]=-(B[0][1]/d)
+    I[1][0]=-(B[1][0]/d)
+    I[1][1]=(B[0][0]/d)
+    print("Inverse of matrix B:")
+    for i in range(r):
+        for j in range(c):
+            print(I[i][j],end=" ")
+        print()
+print("Addition of A+B^-1:")
+Sum=A
+for i in range(r):
+    for j in range(c):
+        Sum[i][j]=A[i][j]+I[i][j]
+        print(int(Sum[i][j]),end=" ") # typecasting is not necessary
+    print()
+
+
+Q.20) Write a python program to accept 2*2 matrix 'A' and 'B' from the user. Find the matrix A*( B inverse )
+
+
+A=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+print("Enter elements for 1st Matrix:")
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    A.append(a)
+for i in range(r):
+    for j in range(c):
+        print(A[i][j],end=" ")
+    print()
+print("Enter elements for 2nd Matrix:")
+B=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    B.append(a)
+for i in range(r):
+    for j in range(c):
+        print(B[i][j],end=" ")
+    print()
+d=(B[0][0]*B[1][1]-B[1][0]*B[0][1])
+if(d==0):
+    print("Inverse doesn't exits")
+else:
+    I=[[0,0],[0,0]]
+    I[0][0]=(B[1][1]/d)
+    I[0][1]=-(B[0][1]/d)
+    I[1][0]=-(B[1][0]/d)
+    I[1][1]=(B[0][0]/d)
+    print("Inverse of matrix B:")
+    for i in range(r):
+        for j in range(c):
+            print(I[i][j],end=" ")
+        print()
+mul=[[0,0],[0,0]]
+for i in range(r):
+    for j in range(c):
+        for k in range(c):
+            mul[i][j]+=A[i][k]*I[k][j]
+print("Multiplication of given M[]:")
+for i in range(r):
+    for j in range(c):
+        print(mul[i][j],end=" ")
+    print()
+
+Q.21) Write a python program to accept 2*2 matrix 'A' and 'B' from the user. Find the matrix ( A+ B inverse )
+
+M1=[]
+r=int(input("Enter no.of rows :"))
+c=int(input("Enter no.of cols :"))
+print("Enter elements for 1st Matrix:")
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M1.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M1[i][j],end=" ")
+    print()
+print("Enter elements for 2nd Matrix:")
+M2=[]
+for i in range(r):
+    a=[]
+    for j in range(c):
+        e=int(input())
+        a.append(e)
+    M2.append(a)
+for i in range(r):
+    for j in range(c):
+        print(M2[i][j],end=" ")
+    print()
+print("Addition of two Matrix")
+s=M1
+for i in range(r):
+	for j in range(c):
+		s[i][j]=M1[i][j]+M2[i][j]
+		print(s[i][j],end=" ")
+	print(" ")
+d=(s[0][0]*s[1][1]-s[1][0]*s[0][1])
+if (d==0):
+    print("Inverse doesn't exit")
+else:
+    I=[[0,0],[0,0]]
+    I[0][0]=(s[1][1]/d)
+    I[0][1]=-(s[0][1]/d)
+    I[1][0]=-(s[1][0]/d)
+    I[1][1]=(s[0][0]/d)
+    print("Inverse of A+B :")
+    for i in range(r):
+        for j in range(c):
+            print(int(I[i][j]),end=" ")
+        print()
